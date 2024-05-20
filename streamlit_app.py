@@ -16,5 +16,6 @@ def load_data(nrows):
   data.rename(lowercase, axis= 'columns', inplace= True)
   data.rename(columns={'crash_date_crash_time': 'date/time'}, inplace= True)
   return data
+  
 data=load_data(100000)
 st.write("hello, world")
