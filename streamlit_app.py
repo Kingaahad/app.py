@@ -9,7 +9,7 @@ st.title("Motor Vehicle Collisions in New York City")
 st.markdown("This application is a Streamlit dashboard that can be used "
 "to analyze motor vehicle collisions in NYC🗽💥🚗")
 
-def data_load(nrows)
+def load_data(nrows)
   data = pd.read_csv(DATA_URL, nrows=nrows, parse_date=[['CRASH_DATE', 'CRASH_TIME']])
   data.dropna(subset=['LATITUDE','LONGITUDE'], inplace=True)
   lowercase= lambda x: str(x).lower()
@@ -17,7 +17,7 @@ def data_load(nrows)
   data.rename(columns={'crash_date_crash_time': 'date/time'}, inplace= True)
   return data
   
-data=data_load(100000)
+data=load_data(100000)
 st.header("Where are the most people injured in NYC")
 injured_people= st.slider("Numbers of persons injured in vehicle collisions",0,19)
 st.map(data.query("injured_persons>= @injured_people")[["latitude","longitude"]].dropna(how="any"))
