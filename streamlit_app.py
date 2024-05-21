@@ -3,8 +3,8 @@ import pandas as pd
 import numpy as np
 
 # Set the data URL
-DATA_URL = "/Users/Kingaahad/This PC/Downloads/Motor_Vehicle_Collisions_-_Crashes.csv"
-
+DATA_URL = ("/Users/Kingaahad/This PC/Downloads/Motor_Vehicle_Collisions_-_Crashes.csv"
+)
 # Define the function to load the data
 def load_data(nrows):
     """Load the motor vehicle collision data with optional number of rows."""
