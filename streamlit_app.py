@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-DATA_URL= ("/https://github.com/Kingaahad/app.py/blob/main/rows.rdf
+DATA_URL= ("https://github.com/Kingaahad/app.py/blob/main/rows.rdf
 )
 st.title("Motor Vehicle Collisions in New York City")
 st.markdown("This application is a Streamlit dashboard that can be used "
@@ -11,7 +11,7 @@ st.markdown("This application is a Streamlit dashboard that can be used "
 
 @st.cache(persist=True) 
 def load_data(nrows):
-  data = pd.read_csv_(DATA_URL, nrows=nrows, parse_date=[['CRASH_DATE', 'CRASH_TIME']])
+  data = pd.read_csv(DATA_URL, nrows=nrows, parse_date=[['CRASH_DATE', 'CRASH_TIME']])
   data.dropna(subset=['LATITUDE','LONGITUDE'], inplace=True)
   lowercase= lambda x: str(x).lower()
   data.rename(lowercase, axis= 'columns', inplace= True)
