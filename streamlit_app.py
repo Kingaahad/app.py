@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-DATA_URL= ("https://github.com/Kingaahad/app.py/blob/main/rows.rdf
+DATA_URL= ("/https://github.com/Kingaahad/app.py/blob/main/rows.rdf"
 )
 st.title("Motor Vehicle Collisions in New York City")
 st.markdown("This application is a Streamlit dashboard that can be used "
